@@ -13,9 +13,12 @@ class Exercises:
 
         self.output = None
         self.queue = None
-        self.queue_is_empty = True
 
-    def smaller_than(self, number: int):
+        self.queue_is_empty = True
+        self.message_fibonacci = "Your number is smaller or equal to one"
+        self.emoji = "／(＞×＜)＼ ／(＞×＜)＼ ／(＞×＜)＼"
+
+    def smaller_than(self, number: int) -> int:
         """
         Checks whether a number is above or
         below a certain threshold
@@ -33,12 +36,12 @@ class Exercises:
             print("(*Φ皿Φ*)")
             return self.threshold
 
-    def divisible_by_three(self, integer: int):
+    def divisible_by_three(self, integer: int) -> bool:
         """
         Checks whether a number is divisible by
         three
         :param integer:
-        :return: true if the number is divisibly by three,
+        :return: true if the number is divisible by three,
         false otherwise
         """
         if integer % 3 == 0:
@@ -51,7 +54,7 @@ class Exercises:
             print("ლ(●ↀωↀ●)ლ")
             return self.is_divisible
 
-    def greatest_common_divisor(self, integer_one: int, integer_two: int):
+    def greatest_common_divisor(self, integer_one: int, integer_two: int) -> int:
         """
         :param integer_one:
         :param integer_two:
@@ -68,7 +71,7 @@ class Exercises:
             print("(^・ω・^ )")
             return self.output
 
-    def get_number_of_elements_in_queue(self, integer: int, other_integer: int):
+    def get_number_of_elements_in_queue(self, integer: int, other_integer: int) -> int:
         """
         A simple queue implementation
         :param integer:
@@ -84,7 +87,7 @@ class Exercises:
         print("🐈🐈🐈🐈🐈🐈🐈🐈🐈🐈🐈🐈")
         return size_of_queue
 
-    def calculate_sum(self, queue):
+    def calculate_sum(self, queue) -> int:
         """
         Calculates the sum of all elements
         in a queue
@@ -102,5 +105,38 @@ class Exercises:
         print("The sum of the queue is: " + str(sum_of_queue))
         print("(=•́ܫ•̀=)")
         return sum_of_queue
+
+    def recursive_fibonacci(self, number: int) -> int:
+        """
+        An implementation of the fibonacci sequence
+        using recursion
+        :param number:
+        :return:
+        """
+        if number <= 1:
+            print(self.message_fibonacci)
+            print("／(･ × ･)＼")
+            return number
+        else:
+            print("We are recursive!")
+            print("(￣Θ￣)")
+            return self.recursive_fibonacci(number - 1) + self.recursive_fibonacci(number - 2)
+
+    def print_sequence(self, sequence: int):
+        """
+        Prints out a sequence
+        line by line
+        :param sequence:
+        :return: all the numbers within
+        the fibonacci sequence
+        """
+        if sequence > 0:
+            for i in range(0, sequence):
+                print(self.recursive_fibonacci(i))
+                print(self.emoji)
+
+
+
+
 
 
