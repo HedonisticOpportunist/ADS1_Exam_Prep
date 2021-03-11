@@ -1,12 +1,19 @@
+from queue import Queue
+
+
 class Exercises:
     """
     These exercises are from the revision sheet
     shared in the lecture
     """
+
     def __init__(self):
         self.threshold = 10
         self.is_divisible = False
+
         self.output = None
+        self.queue = None
+        self.queue_is_empty = True
 
     def smaller_than(self, number: int):
         """
@@ -60,4 +67,40 @@ class Exercises:
             print("The greatest common divisor is: " + str(self.output))
             print("(^・ω・^ )")
             return self.output
+
+    def get_number_of_elements_in_queue(self, integer: int, other_integer: int):
+        """
+        A simple queue implementation
+        :param integer:
+        :param other_integer:
+        :return: the number of elements in the queue
+        """
+        self.queue = Queue(maxsize=4)
+        self.queue.put(integer)
+        self.queue.put(other_integer)
+        self.queue.get()
+        size_of_queue = self.queue.qsize()
+        print(size_of_queue)
+        print("🐈🐈🐈🐈🐈🐈🐈🐈🐈🐈🐈🐈")
+        return size_of_queue
+
+    def calculate_sum(self, queue):
+        """
+        Calculates the sum of all elements
+        in a queue
+        :param queue:
+        :return: the sum if the queue
+        is not empty
+        """
+        if len(queue) is None:
+            print("The queue is empty: ")
+            print("( >ω<)♡(>ω< ✿)")
+            return self.queue_is_empty
+        sum_of_queue = 0
+        for i in range(0, len(queue)):
+            sum_of_queue = sum_of_queue + queue[i]
+        print("The sum of the queue is: " + str(sum_of_queue))
+        print("(=•́ܫ•̀=)")
+        return sum_of_queue
+
 
