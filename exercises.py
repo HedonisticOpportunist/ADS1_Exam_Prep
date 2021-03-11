@@ -1,7 +1,12 @@
 class Exercises:
+    """
+    These exercises are from the revision sheet
+    shared in the lecture
+    """
     def __init__(self):
         self.threshold = 10
         self.is_divisible = False
+        self.output = None
 
     def smaller_than(self, number: int):
         """
@@ -38,3 +43,21 @@ class Exercises:
             print("The number is not divisible by three.")
             print("ლ(●ↀωↀ●)ლ")
             return self.is_divisible
+
+    def greatest_common_divisor(self, integer_one: int, integer_two: int):
+        """
+        :param integer_one:
+        :param integer_two:
+        :return: The greatest common divisor
+        """
+        self.output = integer_one
+        while self.output != integer_two:
+            if self.output > integer_two:
+                self.output = self.output - integer_two
+            else:
+                integer_two = integer_two - self.output
+        if self.output == integer_two:
+            print("The greatest common divisor is: " + str(self.output))
+            print("(^・ω・^ )")
+            return self.output
+
