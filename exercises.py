@@ -134,9 +134,3 @@ class Exercises:
             for i in range(0, sequence):
                 print(self.recursive_fibonacci(i))
                 print(self.emoji)
-
-
-
-
-
-

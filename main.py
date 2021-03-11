@@ -18,4 +18,3 @@ exercise.print_sequence(terms)
 exam = ExamCode()
 arr = [4, 8, 2, 8, 4]
 exam.make_stack(arr)
-
