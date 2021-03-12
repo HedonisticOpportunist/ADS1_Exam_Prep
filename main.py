@@ -14,6 +14,7 @@ exercise.calculate_sum(queue_to_test)
 
 terms = 10
 exercise.print_sequence(terms)
+exercise.binary_search_square_root(terms)
 
 exam = ExamCode()
 arr = [4, 8, 2, 8, 4]

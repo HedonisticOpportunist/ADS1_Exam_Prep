@@ -18,6 +18,8 @@ class Exercises:
         self.message_fibonacci = "Your number is smaller or equal to one"
         self.emoji = "／(＞×＜)＼ ／(＞×＜)＼ ／(＞×＜)＼"
 
+        self.left = 0
+
     def smaller_than(self, number: int) -> int:
         """
         Checks whether a number is above or
@@ -134,3 +136,29 @@ class Exercises:
             for i in range(0, sequence):
                 print(self.recursive_fibonacci(i))
                 print(self.emoji)
+
+    def binary_search_square_root(self, number: int):
+        """
+        A binary search algorithm that checks whether the square
+        root of the number n is integer or otherwise
+        :param number:
+        :return:true if the square root is an integer,
+        false otherwise
+        """
+        length = number - 1
+        left = self.left
+        right = length - 1
+        while right >= left:
+            mid = left + (right - 1) // 2
+            if mid * mid:
+                print("The square root number is an integer.")
+                print("<・ )))><< <・ )))><<<・ )))><<")
+                return True
+            elif mid * mid < number:
+                self.left = mid + 1
+            else:
+                print("The square root number is not an integer.")
+                print("≧( ° ° )≦ ≧( ° ° )≦ ≧( ° ° )≦")
+                right = mid - 1
+        else:
+            return False
