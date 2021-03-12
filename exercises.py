@@ -18,7 +18,7 @@ class Exercises:
         self.message_fibonacci = "Your number is smaller or equal to one"
         self.emoji = "／(＞×＜)＼ ／(＞×＜)＼ ／(＞×＜)＼"
 
-        self.left = 0
+        self.zero = 0
 
     def smaller_than(self, number: int) -> int:
         """
@@ -137,7 +137,7 @@ class Exercises:
                 print(self.recursive_fibonacci(i))
                 print(self.emoji)
 
-    def binary_search_square_root(self, number: int):
+    def binary_search_square_root(self, number: int) -> bool:
         """
         A binary search algorithm that checks whether the square
         root of the number n is integer or otherwise
@@ -146,7 +146,7 @@ class Exercises:
         false otherwise
         """
         length = number - 1
-        left = self.left
+        left = self.zero
         right = length - 1
         while right >= left:
             mid = left + (right - 1) // 2
@@ -155,10 +155,28 @@ class Exercises:
                 print("<・ )))><< <・ )))><<<・ )))><<")
                 return True
             elif mid * mid < number:
-                self.left = mid + 1
+                self.zero = mid + 1
             else:
                 print("The square root number is not an integer.")
                 print("≧( ° ° )≦ ≧( ° ° )≦ ≧( ° ° )≦")
                 right = mid - 1
         else:
             return False
+
+    def recursive_sum(self, number: int) -> int:
+        """
+        A recursive implementation of adding up all the
+        digits in a number
+        :param number:
+        :return: the sum of all the integers in
+        the parameter number
+        """
+        if number <= 1:
+            print("The sum of 1 equals 1:")
+            print("(^◕ᴥ◕^ (^◕ᴥ◕^ (^◕ᴥ◕^")
+            return number
+        else:
+            number += self.recursive_sum(number - 1)
+            print("The sum is: " + str(number))
+            print("ฅ(•ㅅ•❀)ฅ ฅ(•ㅅ•❀)ฅ ฅ(•ㅅ•❀)ฅ ฅ(•ㅅ•❀)ฅ")
+            return number

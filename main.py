@@ -16,6 +16,8 @@ terms = 10
 exercise.print_sequence(terms)
 exercise.binary_search_square_root(terms)
 
+exercise.recursive_sum(16)
+
 exam = ExamCode()
 arr = [4, 8, 2, 8, 4]
 exam.make_stack(arr)
