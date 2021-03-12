@@ -9,7 +9,7 @@ class ExamCode:
     """
 
     def __init__(self):
-        self.stack = []
+        self.message = ""
 
     def make_stack(self, numbers):
         """
@@ -18,10 +18,35 @@ class ExamCode:
         :return:
         """
         array_length = len(numbers)
+        new_stack = []
 
         for i in range(math.floor(array_length / 2)):
-            self.stack.append(numbers[i])
+            new_stack.append(numbers[i])
 
-        print("The stack is: " + str(self.stack))
+        self.message = "The stack is: " + str(new_stack)
+        print(self.message)
         print("\ō͡≡o˞̶ \ō͡≡o˞̶ \ō͡≡o˞̶ \ō͡≡o˞̶")
-        return self.stack
+        return new_stack
+
+    def is_palindrome(self, array) -> bool:
+        """
+        Checks whether a given array is a palindrome
+        :param array:
+        :return: true if the array is a palindrome, false otherwise
+        """
+        if len(array) == 1:
+            print("We have a palindrome here of length 1:")
+            print("∪･ｪ･∪ ∪･ｪ･∪ ∪･ｪ･∪ ∪･ｪ･∪")
+            return True
+        else:
+            palindrome_stack = self.make_stack(array)
+            range_of_stack = math.floor(len(array)) + 1
+            for i in range(0, range_of_stack):
+                if palindrome_stack[-1] != array[i]:
+                    print("This array is not a palindrome.")
+                    print("(－_－) zzZ (－_－) zzZ (－_－) zzZ")
+                    return True
+                else:
+                    print("This array is a palindrome.")
+                    print("ʕ •̀ ω •́ ʔ ʕ •̀ ω •́ ʔ ʕ •̀ ω •́ ʔ ʕ •̀ ω •́ ʔ")
+                    return False

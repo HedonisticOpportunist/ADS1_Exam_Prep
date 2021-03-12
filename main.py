@@ -21,3 +21,8 @@ exercise.recursive_sum(16)
 exam = ExamCode()
 arr = [4, 8, 2, 8, 4]
 exam.make_stack(arr)
+
+palindrome_arr = [1, 2, 1]
+non_palindrome = [1, 2, 3, 4]
+exam.is_palindrome(palindrome_arr)
+exam.is_palindrome(non_palindrome)
