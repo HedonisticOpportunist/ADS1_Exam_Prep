@@ -219,4 +219,3 @@ class Exercises:
         else:
             print("Invalid output! X X X")
             return "Invalid output :D"
-

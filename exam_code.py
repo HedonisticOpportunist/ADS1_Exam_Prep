@@ -120,6 +120,3 @@ class ExamCode:
 
     def sorter(self, array):
         return self.sort(array, len(array) - 1)
-
-
-
