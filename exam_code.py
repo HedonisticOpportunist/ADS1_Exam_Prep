@@ -119,4 +119,9 @@ class ExamCode:
         return self.sort(array, right - 1)
 
     def sorter(self, array):
+        """
+        Calls the recursive sorting function
+        :param array:
+        :return: the sorted array
+        """
         return self.sort(array, len(array) - 1)

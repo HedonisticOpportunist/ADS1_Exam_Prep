@@ -19,6 +19,7 @@ class Exercises:
         self.emoji = "／(＞×＜)＼ ／(＞×＜)＼ ／(＞×＜)＼"
 
         self.zero = 0
+        self.stack = None
 
     def smaller_than(self, number: int) -> int:
         """
@@ -219,3 +220,11 @@ class Exercises:
         else:
             print("Invalid output! X X X")
             return "Invalid output :D"
+
+    # def factorial_with_stack(self, number: int):
+    #     self.stack = []
+    #     self.stack.append(1)
+    #     if number > 0:
+    #         for i in range(0, number):
+    #             self.stack.append(number * self.stack.pop())
+    #     return self.stack
