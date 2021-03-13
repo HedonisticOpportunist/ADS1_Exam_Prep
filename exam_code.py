@@ -84,5 +84,42 @@ class ExamCode:
         length = len(array)
         return self.recursive_palindrome(array, 0, length - 1)
 
+    def swap(self, array, i: int, j: int):
+        """
+        Swaps elements of an array
+        :param array:
+        :param i:
+        :param j:
+        :return: The array with the swapped elements
+        """
+        temp = array[i]
+        array[i] = array[j]
+        array[j] = temp
+        self.message = "Elements have been swapped."
+        print(self.message)
+        print("／(˃ᆺ˂)＼ ／(˃ᆺ˂)＼／(˃ᆺ˂)＼")
+        return array
+
+    def sort(self, array, right: int):
+        """
+        Swaps the elements of an array
+        :param array:
+        :param right:
+        :return: the swapped array
+        """
+        if right <= 0:
+            return array
+        for i in range(0, right):
+          if array[ i + 1]  < array[i]:
+              print("Let us swap some arrays.")
+              print("／(˃ᆺ˂)＼ ／(˃ᆺ˂)＼／(˃ᆺ˂)＼")
+              self.swap(array, i, i + 1)
+        print("The swapped array is " + str(array))
+        print("(￣(00)￣) (￣(00)￣) (￣(00)￣)")
+        return self.sort(array, right - 1)
+
+    def sorter(self, array):
+        return self.sort(array, len(array) - 1)
+
 
 

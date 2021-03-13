@@ -29,3 +29,11 @@ exam.is_palindrome(non_palindrome)
 
 exam.is_palindrome_new(palindrome_arr)
 exam.is_palindrome_new(non_palindrome)
+
+array_to_sort = [5, 6, 3, 1]
+exam.sorter(array_to_sort)
+
+exercise.recursive_factorial(7)
+exercise.recursive_choose("*", 3)
+exercise.recursive_choose("+", 1)
+exercise.recursive_choose("", 0)

@@ -180,3 +180,43 @@ class Exercises:
             print("The sum is: " + str(number))
             print("ฅ(•ㅅ•❀)ฅ ฅ(•ㅅ•❀)ฅ ฅ(•ㅅ•❀)ฅ ฅ(•ㅅ•❀)ฅ")
             return number
+
+    def recursive_factorial(self, number: int) -> int:
+        """
+        A recursive implementation of determining the
+        factorial of a number
+        :param number:
+        :return: the factorial of the number
+        """
+        if number <= 0:
+            print("The number is smaller or equal to one.")
+            print("=^_^= =^_^==^_^= =^_^=")
+            return 1
+
+        print("Let us do some factorising: ")
+        print("චᆽච චᆽච චᆽච")
+        factorial = self.recursive_factorial(number - 1) * number
+        print("The factorial is: " + str(factorial))
+        return factorial
+
+    def recursive_choose(self, sign: str, number: int):
+        """
+        Chooses which operation to undertake depending
+        on the the sign
+        :return: factorial if the sign is a *,
+        sum if the sign is +,
+        otherwise an invalid string message is returned
+
+        """
+        if sign == "+":
+            print("Let us sum up some numbers!")
+            print("ㅇㅅㅇ ㅇㅅㅇ ㅇㅅㅇ")
+            return self.recursive_sum(number)
+        if sign == "*":
+            print("Let us do some factorising")
+            print("ฅ•ω•ฅ ฅ•ω•ฅ ฅ•ω•ฅ ฅ•ω•ฅ")
+            return self.recursive_factorial(number)
+        else:
+            print("Invalid output! X X X")
+            return "Invalid output :D"
+
