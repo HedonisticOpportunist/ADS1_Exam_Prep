@@ -26,3 +26,6 @@ palindrome_arr = [1, 2, 1]
 non_palindrome = [1, 2, 3, 4]
 exam.is_palindrome(palindrome_arr)
 exam.is_palindrome(non_palindrome)
+
+exam.is_palindrome_new(palindrome_arr)
+exam.is_palindrome_new(non_palindrome)
