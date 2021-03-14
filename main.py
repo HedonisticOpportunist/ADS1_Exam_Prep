@@ -37,3 +37,6 @@ exercise.recursive_factorial(7)
 exercise.recursive_choose("*", 3)
 exercise.recursive_choose("+", 1)
 exercise.recursive_choose("", 0)
+
+exercise.factorial_with_stack(8)
+exercise.stack_implementation()

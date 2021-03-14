@@ -221,10 +221,37 @@ class Exercises:
             print("Invalid output! X X X")
             return "Invalid output :D"
 
-    # def factorial_with_stack(self, number: int):
-    #     self.stack = []
-    #     self.stack.append(1)
-    #     if number > 0:
-    #         for i in range(0, number):
-    #             self.stack.append(number * self.stack.pop())
-    #     return self.stack
+    def factorial_with_stack(self, number: int):
+        """
+        Implements factorising of a number
+        via a stack
+        :param number:
+        :return: the factorised stack
+        """
+        self.stack = []
+        self.stack.append(1)
+        if number > 0:
+            for i in range(0, number):
+                self.stack.append(number * self.stack[-1])
+        print("The stack is: " + str(self.stack))
+        print(" （＾・ω・＾✿）  （＾・ω・＾✿）  （＾・ω・＾✿）")
+        return self.stack
+
+    def stack_implementation(self):
+        """
+        Just your standard, run off the hill
+        stack implementation
+        :return: a stack 
+        """
+        self.stack = []
+        self.stack.append(1)
+        self.stack.append(3)
+
+        self.stack.pop()
+        self.stack.append(2)
+        self.stack.append(5)
+
+        print("The stack is: " + str(self.stack))
+        print(" （＾・ω・＾✿）  （＾・ω・＾✿）  （＾・ω・＾✿）")
+        return self.stack
+
